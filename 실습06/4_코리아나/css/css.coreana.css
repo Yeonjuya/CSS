@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "GS";
+    src: url(../font/GmarketSansLight.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GS";
+    src: url(../font/GmarketSansMedium.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GS";
+    src: url(../font/GmarketSansBold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+address{
+    font-style: normal;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+fieldset{
+    border: 0;
+}
+
+legend,caption{
+    display: none;
+}
+
+.inner{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+body{
+    font-family: 'GS', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* header */
+#header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .gnb{
+    display: flex;
+}
+
+#header .gnb li a{
+    display: block;
+    padding: 50px 50px;
+}
+
+#header .gnb li a:hover{
+    display: block;
+    padding: 50px 50px;
+    color: #cd8863;
+} 
+
+#header .gnb li a.on{
+    display: block;
+    padding: 50px 50px;
+    color: #cd8863;
+} 
+
+/* container */
+.container .sub_visual{
+    background: url(../images/sub_visual.jpg) no-repeat 0 center;
+}
+
+.container .sub_visual .sub_tit h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.container .sub_visual .sub_tit{
+    padding: 150px 0;
+    text-align: left;
+}
+
+.container .sub_visual .sub_tit p{
+    color: #fff;
+    font-weight: 300;
+    padding-top: 35px;
+}
+
+.container .sub_visual .lnb{
+    background: #fff;
+    padding-left: 100px;
+}
+
+.container .sub_visual ul{
+    display: flex;
+    border-bottom: 1px solid #a69e99;
+    width: 1000px;
+}
+
+.container .sub_visual li a{
+    font-size: 20px;
+    display: block;
+    color: #a69e99;
+    border-bottom: solid 5px #fff;
+    padding: 70px 20px 30px;
+}
+
+.container .sub_visual li a.on{
+    font-size: 20px;
+    display: block;
+    color: #333;
+    font-weight: 700;
+    padding: 70px 20px 30px;
+    border-bottom: solid 5px #333;
+}
+
+.container .sub_visual li a:hover{
+    font-size: 20px;
+    display: block;
+    color: #333;
+    font-weight: 700;
+    padding: 70px 20px 30px;
+    border-bottom: solid 5px #333;
+}
+
+/* main */
+.main h3{
+    text-align: center;
+    padding: 110px;
+    font-size: 40px;
+}
+
+.container .main .overview{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.container .main dl{
+    border: 1px solid #a69e99;
+    padding: 50px;
+    width: calc((100% - 100px) / 3);
+    text-align: center;
+}
+
+.container .main dl dt{
+    color: #b3b3b3;
+    padding: 80px 0 20px;
+    font-size: 20px;
+}
+
+.container .main dl dd{
+    font-size: 35px;
+}
+
+.container .main .overview .icon1{
+    background: url(../images/ico_01.png) no-repeat center 60px;
+}
+
+.container .main .overview .icon2{
+    background: url(../images/ico_02.png) no-repeat center 60px;
+}
+
+.container .main .overview .icon3{
+    background: url(../images/ico_03.png) no-repeat center 60px;
+}
+
+.container .main .overview .icon4{
+    background: url(../images/ico_04.png) no-repeat center 60px;
+}
+
+.container .main .overview .icon5{
+    background: url(../images/ico_05.png) no-repeat center 60px;
+}
+
+.container .main .overview .icon6{
+    background: url(../images/ico_06.png) no-repeat center 60px;
+}
+
+.container .main .coreana{
+    display: flex;
+    gap: 100px;
+    padding: 100px 0;
+}
+
+.container .main .coreana img{
+    width: 400px;
+}
+
+.container .main .coreana_txt{
+    padding: 110px 0;
+}
+
+.container .main .coreana_txt h4{
+    font-size: 30px;
+    padding-bottom: 35px;
+}
+
+.container .main .coreana_txt span{
+    color: #cd8863;
+}
+
+.container .main .coreana_txt p{
+    color: #b3b3b3;
+}
+
+#footer{
+    background: #6e735c;
+}
+
+#footer .inner{
+    display: flex;
+    padding: 100px 0 110px;
+    justify-content: space-between;
+}
+
+#footer .footer_txt{
+    padding-left: 50px;
+    margin-right: auto;
+    color: rgba(255,255,255,0.5);
+}
+
+#footer .copy{
+    color: #505d52;
+    padding-top: 30px;
+}
+
+#footer select{
+    background: #525546 url(../images/family_arrow.png)no-repeat 187px center;
+    border: 0;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'GS', sans-serif;
+    width: 220px;
+    appearance: none;
+}

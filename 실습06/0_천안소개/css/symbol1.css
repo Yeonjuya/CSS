@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #333;
+}
+
+#wrap{
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+#lnb{
+    width: 250px;
+}
+
+#main{
+    width: calc(100% - 300px);
+}
+
+#wrap #lnb h2{
+    background: linear-gradient(#d31962, #571e78);
+    font-size: 30px;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#lnb ul{
+    border: #571e78 1px solid;
+    padding: 30px;
+}
+
+#lnb ul li a{
+    display: block;
+    color: #666;
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0;
+    background: url(../images/menu_off.gif) no-repeat right center;
+}
+
+#lnb ul li a:hover{
+    color: #571e78;
+    background: url(../images/menu_on.gif) no-repeat right center;
+    border-bottom: 1px solid #d31962;
+}
+
+
+#lnb ul li a.on{
+    color: #571e78;
+    background: url(../images/menu_on.gif) no-repeat right center;
+    border-bottom: 1px solid #d31962;
+}
+
+#main h3{
+    font-size: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#main .symbol{
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px dashed #666;
+}
+
+#main .symbol .symbol_img{
+    width: 270px;
+}
+
+#main .symbol .symbol_txt{
+    width: calc(100% - 300px);
+}
+
+/* symbol 기준으로 한 1번 */
+#main .symbol:nth-of-type(1){
+    background: url(../images/symbol_bg_01.gif) no-repeat right 30px;
+}
+
+#main .symbol:nth-of-type(2){
+    background: url(../images/symbol_bg_02.gif) no-repeat right 30px;
+}
+
+#main .symbol:nth-of-type(3){
+    background: url(../images/symbol_bg_03.gif) no-repeat right 30px;
+}
+
+#main .symbol:nth-of-type(4){
+    background: url(../images/symbol_bg_04.gif) no-repeat right 30px;
+}
+
+#main .symbol dt{
+    font-weight: 700;
+}
+
+
+#main .symbol span{
+    font-weight: 700;
+    color: #d31962;
+}

@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NBS';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+address{
+    font-style: normal;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+body{
+    font-family: 'NBS', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* header */
+#header{
+    background: #dbeaf5;
+    padding: 0 0 30px;
+}
+
+#header .inner{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    background: #f1f8fd;
+    padding: 30px 0 0;
+}
+
+#header .gnb{
+    display: flex;
+}
+
+#header .gnb li a{
+    display: inline-block;
+    padding: 10px 60px;
+    font-size: 16px;
+}
+
+#header .gnb li a:hover{
+    color: #5db4f7;
+}
+
+#header .gnb li a.on{
+    color: #5db4f7;
+}
+
+/* 이미지 블럭에 맞추기 */
+#header .gnb img{
+    vertical-align: top;
+}
+
+/* container */
+#container .inner{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+}
+
+#container .lnb{
+    width: 250px;
+}
+
+#container .inner .lnb h2{
+    padding: 60px 0 40px;
+}
+
+#container .inner .lnb li a{
+    display: block;
+    border: solid 1px #006e18;
+    padding: 15px 0px 15px 40px;
+    text-align: left;
+    background: url(../images/lnb_bg.png) no-repeat 220px center;
+    margin-top: 5px;
+}
+
+#container .inner .lnb li a:hover{
+    background: #006e18 url(../images/lnb_bg.png) no-repeat 20px center;
+    color: #fff;
+}
+
+#container .inner .lnb li a.on{
+    background: #006e18 url(../images/lnb_bg.png) no-repeat 20px center;
+    color: #fff;
+}
+
+#container .main{
+    width: calc(100% - 300px);
+    margin-bottom: 120px;
+}
+
+#container .main h3{
+    border-bottom: solid 3px #000;
+    font-size: 25px;
+    padding: 60px 0 30px;
+    text-align: left;
+}
+
+#container .main .jeju{
+    background: url(../images/greetings_img.png) no-repeat right 70px;
+}
+
+#container .main .jeju img{
+    padding: 50px 0 60px;
+}
+
+#container .main .jeju h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#container .main .jeju h4 span{
+    font-weight: 700;
+    color: #689057;
+}
+
+#container .main .jeju p{
+    padding-top: 40px;
+}
+
+#container .main .jeju .btn{
+    display: inline-block;
+    background: #689057 url(../images/icon_download.png) no-repeat 175px center;
+    padding: 13px 75px 13px 30px;
+    color: #fff;
+    margin-top: 60px;
+}
+
+#footer{
+    background: #333333;
+    color: #fff;
+    padding: 50px 0 100px;
+}
+
+/* footer */
+
+#footer .inner{
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    justify-content: space-between;
+    text-align: right;
+}
+
+#footer .inner address span{
+    color: #689057;
+    padding-left: 5px;
+}
+
+#footer .inner .copy{
+    color: #717171;
+}
