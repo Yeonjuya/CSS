@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box; }
+a{ text-decoration: none; color: #000; }
+address{ font-style: normal; }
+table{ border-collapse: collapse; width: 100%; }
+ul,ol{ list-style: none; }
+fieldset{ border: 0; }
+legend,caption{ display: none; }
+.inner{ margin: 0 auto; width: 1200px; }
+body{
+    font-family: 'scdream', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* header */
+#header{
+    background: #021f60;
+}
+
+#header h1{
+    text-align: center;
+    padding: 30px 0;
+}
+
+#header .gnb{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+#header .gnb > li > a{
+    display: block;
+    padding: 10px 50px;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 50px;
+}
+
+/* 2차메뉴까지 가도 글자색이 유지됨 li hover시 a */
+#header .gnb > li:hover > a{
+    color:#4882ff;
+}
+
+#header .gnb > li{
+    position: relative;
+}
+
+#header .gnb > li .depth2{
+    position: absolute;
+    background: #021f60;
+    width: 200px;
+    padding: 20px;
+    display: none;
+}
+
+#header .gnb > li .depth2 a{
+    color: rgba(255,255,255,0.5);
+    display: block;
+    padding: 5px 10px;
+}
+
+#header .gnb > li .depth2 a:hover{
+    background: #4882ff;
+    color: #fff;
+}
+
+#header .gnb > li:hover .depth2{
+    display: block;
+}
+
+/* container */
+.sub_visual{
+    background: url(../images/menu_intro_visual.jpg) no-repeat center 0;
+    padding-bottom: 50px;
+}
+
+.sub_visual .sub_tit{
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.sub_visual .sub_tit h2{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.sub_visual .sub_tit p{
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-top: 20px;
+}
+
+.sub_visual .lnb{
+    display: flex;
+    gap: 5px;
+}
+
+.sub_visual .lnb li{
+    width: calc((100% - 25px)/ 6);
+}
+
+.sub_visual .lnb li a{
+    display: block;
+    color: #fff;
+    text-align: left;
+    background: rgba(0,0,0,0.7);
+    padding: 15px 20px 10px;
+}
+
+.sub_visual .lnb li a:hover{
+    background: #021f60;
+}
+
+.sub_visual .lnb li a.on{
+    background: #021f60;
+} 
+
+.main{
+    padding: 50px 0 100px;
+}
+
+.main .tit{
+    display: flex;
+    justify-content: space-between;
+    background: url(../images/patten.jpg) repeat-x 0 bottom;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.main .tit h3{
+    font-size: 30px;
+}
+
+.main .tit .breadcrumbs{
+    display: flex;
+}
+
+.main .tit .breadcrumbs li{
+    background: url(../images/breadcrumbs_arrow.png) no-repeat  12px center;
+    padding-left: 30px;
+}
+
+.main .tit .breadcrumbs li:first-child{
+    background: url(../images/home.png) no-repeat 12px center;
+}
+
+.main .menu{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main .menu li{
+    background: #eee;
+    width: calc((100% - 40px) / 3);
+    padding-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.main .menu li img{
+    width: 100%;
+}
+
+.main .menu li h4{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.main .menu li .over{
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 160px 50px 0;
+    display: none;
+}
+
+.main .menu li .over a{
+    display: inline-block;
+    background: #fff url(../images/icon_plus.png) no-repeat right 30px center;
+    padding: 15px 50px 10px 30px;
+    margin-top: 30px;
+}
+
+/* li를 눌렀을 때 over라는 값이 보이게 함 */
+.main .menu li:hover .over{
+    display: block;
+}
+
+#footer{
+    background: #333;
+    padding: 50px 0 100px;
+    color: #fff;
+}
+
+#footer .inner{
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .footer_logo{
+    opacity: 0.5;
+}
+
+#footer address{
+    padding: 30px 0;
+    opacity: 0.6;
+    line-height: 2;
+}
+
+#footer .copy{
+    opacity: 0.3;
+}
+
+#footer .footer_right ul{
+    display: flex;
+    gap: 20px; 
+}
+
+#footer .footer_right li a{
+    color: #fff;
+    display: inline-block;
+}
+
+#footer .footer_right .sns{
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+
+.gotop{
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    cursor: pointer;
+}

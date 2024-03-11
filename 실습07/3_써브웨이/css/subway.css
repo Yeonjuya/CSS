@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box; }
+a{ text-decoration: none; color: #000; }
+address{ font-style: normal; }
+table{ border-collapse: collapse; width: 100%; }
+ul,ol{ list-style: none; }
+fieldset{ border: 0; }
+legend,caption{ display: none; }
+.inner{ margin: 0 auto; width: 1200px; }
+body{
+    font-family: 'scdream', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #333;
+}
+
+#header{
+    border-top: 3px solid #009223;
+}
+
+#header h1{
+    text-align: center;
+    padding: 35px 0;
+}
+
+#header .gnb{
+    display: flex;
+    justify-content: center;
+}
+
+#header .gnb > li > a{
+    display: block;
+    padding: 10px 50px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 25px 50px;
+}
+
+#header .gnb > li{
+    position: relative;
+    width: calc(100% / 6);
+}
+
+
+#header .gnb li a.on{
+    color: #009223;
+}
+
+#header .gnb > li:hover > a{
+    color: #009223;
+}
+
+#header .gnb > li .depth2{
+    width: calc(100% / 6);
+    background: #009223;
+    padding: 30px 20px 10px;
+    position: absolute;
+    width: 180px;
+    text-align: center;
+    display: none;
+}
+
+#header .gnb > li .depth2 a.on{
+    display: block;
+    color: #fff;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+#header .gnb > li .depth2 a{
+    display: block;
+    color: #fff;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#header .gnb > li .depth2 a:hover{
+    color: #ffc300;
+}
+
+#header .gnb li .depth2 a.on{
+    color: #ffc300;
+}
+
+#header .gnb > li:hover .depth2{
+    display: block;
+}
+
+/* cotainer */
+.sub_visual{
+    background: #eee url(../images/sub_visual_sandwich.jpg) no-repeat center 0;
+}
+
+.sub_visual .sub_tit{
+    padding: 120px 90px;
+    color: #fff;
+    text-align: center;
+}
+
+.sub_visual .sub_tit ol li:last-child{
+    background: none;
+}
+
+.sub_visual .sub_tit h2{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.sub_visual .sub_tit ol{
+    display: flex;
+    justify-content: center;
+}
+
+.sub_visual .breadcrumbs li{
+    background: url(../images/circle.png) no-repeat right center;
+    padding: 0 15px;
+}
+
+.sub_visual .lnb{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+.sub_visual .lnb a{
+    display: block;
+    padding: 0 30px;
+    border-left: 1px solid #eee;
+}
+
+.sub_visual .lnb a:hover{
+color: #009223;
+font-weight: 700;
+}
+
+.sub_visual .lnb li:nth-child(1) a{
+    border: 0;
+}
+
+.main{
+background: #eee;
+padding-bottom: 140px;
+}
+
+.main h3{
+    text-align: center;
+    font-size: 50px;
+    padding: 100px 0;
+}
+
+.main .menu{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.main .menu li{
+    background: #fff;
+    width: calc((100% - 60px) / 3);
+    padding-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.main .menu li img{
+    width: 100%;
+}
+
+.main .menu li h4{
+    font-size: 30px;
+}
+
+.main .menu li .tit{
+    color: #6c6272;
+    padding-bottom: 30px;
+}
+
+.main .menu li p span{
+    color: #ffc300;
+    font-weight: 700;
+}
+
+.main .menu li .over{
+    background: #009223;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 140px 50px;
+    display: none;
+}
+
+.main .menu li:hover .over{
+    display: block;
+}
+
+/* 자세히보기 */
+.main .menu li .over a{
+    display: inline-block;
+    background: #ffc300;
+    color: #fff;
+    padding: 15px 50px;
+    margin-top: 35px;
+}
+
+/* footer */
+#footer{
+    background: #333;
+    padding: 100px;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer address{
+    padding: 30px 0;
+    opacity: 0.6;
+    line-height: 2;
+    color: #fff;
+}
+
+#footer .copy{
+    color: rgba(255,255,255,0.3);
+}
+
+#footer .footer{
+    color: #fff;
+    display: flex;
+}
+
+#footer .footer li a{
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+}
+
+#footer .sns{
+    display: flex;
+    gap:10px;
+    justify-content: flex-end;
+}
+
+.gotop{
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    cursor: pointer;
+}
+
