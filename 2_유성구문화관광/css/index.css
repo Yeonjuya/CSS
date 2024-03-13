@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+body{
+    font-size: 100%;
+    line-height: 1.5;;
+    color: #333;
+    font-family: 'pretendard',sans-serif;
+}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap{
+    overflow-x: hidden;
+    min-width: 1200px;
+    background: url(../images/main_bg.png) no-repeat;
+}
+
+/* header */
+#header h1{
+    text-align: center;
+    padding: 45px;
+}
+
+#header nav{
+    border-top: solid rgba(255,255,255,0.5) 1px;
+    border-bottom: solid rgba(255,255,255,0.5) 1px;
+}
+
+#header .gnb{
+    display: flex;
+    justify-content: center;
+}
+
+#header .gnb > li > a{
+    display: block;
+    font-size: 20px;
+    padding: 30px 55px;
+    color: #fff;
+}
+
+/* main_banner */
+
+#main_banner{
+    text-align: center;
+}
+
+#main_banner h2{
+    padding: 100px 0;
+}
+
+.sub_visual img{
+    width: 1200px;
+    border-radius: 0 0 200px 0;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+/* course */
+#course .inner h2{
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    padding: 170px 0 10px;
+
+}
+#course .inner span{
+    font-weight: 700;
+}
+
+#course .inner p{
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+}
+
+#course .recommend{
+    width: 1200px;
+    display: flex;
+    gap: 30px;
+    background: #fff;
+}
+
+#course .recommend img{
+    width: 100%;
+}
+
+#course .recommend li{
+    width: calc(100% - 90px / 4);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#course .recommend dt{
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+#course .recommend dd{
+    text-align: center;
+}

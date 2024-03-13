@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+body{
+    font-size: 100%;
+    line-height: 1.5;;
+    color: #333;
+    font-family: 'pretendard',sans-serif;
+}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 가로 스크롤바를 생성되지 않게 하고 창이 줄면 1200px만큼 보이게 가로 스크롤바 생성 */
+#wrap{
+    overflow-x: hidden;
+    min-width: 1200px;
+}
+
+/* header */
+#header{
+    border-top: solid 5px #009223;
+}
+
+#header h1{
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+#header .gnb{
+    display: flex;
+    justify-content: center;
+}
+
+#header .gnb > li > a{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 50px;
+}
+
+#header .gnb a:hover{
+    color: #009223;
+}
+
+#header .gnb a.on{
+    color: #009223;
+}
+
+
+#header .gnb > li{
+    position: relative;
+}
+
+#header .gnb > li .depth2{
+    display: none;
+    z-index: 2;
+    position: absolute;
+    left: calc(50% - 100px);
+    width: 200px;
+    background: #009223;
+    border-radius: 30px 0;
+    padding: 20px 0;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+
+#header .gnb > li:hover .depth2{
+    display: block;
+}
+
+#header .gnb > li .depth2 a{
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 3px;
+}
+
+/* main_banner */
+#main_banner h2{
+    display: none;
+}
+
+#main_banner{
+    text-align: center;
+    position: relative;
+}
+
+#main_banner ul{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    border-radius: 30px 0;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+#main_banner ul li a{
+    display: block;
+    padding: 30px 70px 30px 120px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#main_banner ul li:nth-child(1) a{
+    background: #ffce32 url('../images/icon_map.png') no-repeat
+    70px center;
+}
+
+#main_banner ul li:nth-child(2) a{
+    background: #009223 url('../images/icon_franchise.png') no-repeat
+    70px center;
+    color: #fff;
+}
+
+/* Subway's Menu */
+#menu{
+    padding: 150px 0;
+}
+
+#menu h2{
+    padding: 20px 30px 0;
+    font-size: 30px;
+    font-weight: 900;
+    background: url('../images/h2_bg.png') no-repeat;
+}
+
+#menu ul{
+    display: flex;
+}
+
+#menu ul li{
+    width: calc(100% / 3);
+    text-align: center;
+    transform: scale(0.9,0.9);
+    transition:  all 0.6s;
+    position: relative;
+}
+
+#menu ul li img{
+    width: 100%;
+}
+
+#menu ul li dl dt{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+#menu ul li dl dd{
+    color: #999;
+    font-size: 18px;
+}
+
+#menu ul li:hover{
+    transform: scale(1,1);
+}
+
+#menu ul li .over{
+    position: absolute;
+    left: calc(50% - 49px);
+    top: calc(50% - 49px);
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+#menu ul li .over:hover{
+    opacity: 1;
+}
+
+/* franchise */
+
+#franchise{
+    background: url(../images/franchise_bg.jpg) no-repeat center;
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+}
+
+#franchise h2{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#franchise p{
+    opacity: 0.8;
+    padding: 30px;
+}
+
+#franchise a{
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 15px 50px;
+    border-radius: 60px;
+    transition: all 0.6s;
+    color: #fff;
+    font-weight: 700;
+}
+
+#franchise a:hover{
+    background: #fff;
+    color: #333;
+}
+
+/* guide */
+
+#guide{
+    background: url(../images/bg_pattern.gif);
+    padding: 150px 0;
+}
+
+#guide .inner{
+    display: flex;
+    gap: 50px;
+}
+
+#guide .method{
+    box-shadow: 5px 5px 5px rgba(255,255,255,0.2);
+    color: #fff;
+    width: 400px;
+    background: #01a5e2 url(../images/method.png) no-repeat 140px 100px;
+    padding: 50px;
+    border-radius: 30px 30px 0 30px;
+}
+
+#guide .history{
+    overflow: hidden;
+    width: calc(100% - 450px);
+    background: #ff8300;
+    display: flex;
+    border-radius: 30px 0;
+}
+
+#guide .history_txt{
+    color: #fff;
+    padding: 50px;
+}
+
+
+#guide .history img{
+    vertical-align: top;
+}
+
+#guide h3{
+    font-size: 25px;
+}
+
+#guide a{
+    display: inline-block;
+    padding: 10px 50px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    margin-top: 30px;
+    color: #fff;
+    transition: all 0.6s;
+    font-weight: 700;
+}
+
+#guide a:hover{
+    background: #fff;
+    color: #333;
+}
+
+
+#guide .inner > div{
+    transition: all 0.6s;
+}
+
+#guide .inner > div:hover{
+    transform: translate(10px, 10px);
+}
+
+/* footer */
+#footer{
+    background: #333333;
+    padding: 100px;
+    color: #fff;
+}
+
+#footer .footer_link{
+    display: flex;
+    gap: 20px;
+}
+
+#footer .footer_link li a{
+    color: rgba(255,255,255,0.5);
+}
+
+#footer .footer_bottom{
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255,255,255,0.3);
+}
+
+#footer .copy{
+    color: rgba(255,255,255,0.2);
+}
+
+#footer .sns{
+    display: flex;
+    gap: 20px;
+}
+
+#footer .sns a{
+    opacity: 0.5;
+}
+
+#footer .sns a:hover{
+    opacity: 1;
+}
+
+.gotop{
+    display: block;
+    background: #292929 url(../images/gotop.png) no-repeat center;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: transparent;
+}
