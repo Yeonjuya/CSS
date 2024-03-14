@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Animation 속성</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #CCC;
+            padding: 10px;
+        }
+
+        th {
+            background: #EEE;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animation 속성</h1>
+    <table>
+        <tr>
+            <th>속성</th>
+            <th>입력값/선택값</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>animation-name</td>
+            <td>명칭입력</td>
+            <td>애니메이션 키프레임 이름</td>
+        </tr>
+        <tr>
+            <td>animation-duration</td>
+            <td>초단위 입력</td>
+            <td>애니메이션 1회의 진행 시간</td>
+        </tr>
+        <tr>
+            <td>animation-timing-function</td>
+            <td>linear, ease, ease-in, ease-out, ease-in-out 등</td>
+            <td>재생 중간의 속도 지정</td>
+        </tr>
+        <tr>
+            <td>animation-delay</td>
+            <td>초단위 입력</td>
+            <td>이벤트 발생 후 몇 초 후에 애니메이션할지 지정</td>
+        </tr>
+        <tr>
+            <td>animation-iteration-count</td>
+            <td>횟수입력 혹은 infinite</td>
+            <td>반복횟수</td>
+        </tr>
+        <tr>
+            <td>animation-direction</td>
+            <td>- normal : 기본 값 (forwards)<br>
+                - reverse : 애니메이션이 역방향으로 진행 (backwards)<br>
+                - alternate : 애니메이션이 기본값으로(앞) 진행된 후 역방향으로 번갈아 진행<br>
+                - alternate-reverse : 애니메이션이 역방향으로(뒤) 진행된 후 앞으로 번갈아 진행</td>
+            <td>애니메이션의 진행방향 지정</td>
+        </tr>
+        <tr>
+            <td>animation-fill-mode</td>
+            <td>- none : 기본값 (따로 적용되지 않음)<br>
+                - forwards : 마지막 키 프레임에 의해 설정된 스타일 값을 유지<br>
+                - backwards : 첫 번째 키 프레임에 설정된 스타일 값을 가져오고<br> 애니메이션 지연 기간 동안이 값을 유지<br>
+                - both : 애니메이션은 앞뒤 모두에 대한 규칙을 따름</td>
+            <td>애니메이션 시작 전, 끝나기 전(또는 둘 다) 스타일을 지정</td>
+        </tr>
+        <tr>
+            <td>animation-play-state</td>
+            <td>- paused : 애니메이션 일시중지<br>
+                - running : 기본값 (애니메이션 실행)
+            </td>
+            <td>재생상태 지정</td>
+        </tr>
+        <tr>
+            <td>animation</td>
+            <td>name duration timing-function delay iteration-count direction fill-mode play-state</td>
+            <td>애니메이션 속성을 한꺼번에 지정</td>
+        </tr>
+    </table>
+</body>
+
+</html>

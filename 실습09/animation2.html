@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation2</title>
+</head>
+<style>
+    @keyframes motion {
+        25% {
+            transform: translateX(200px);
+            background: #ff0;
+        }
+
+        50% {
+            transform: translate(200px, 200px);
+            background: #00f;
+        }
+
+        60% {
+            transform: translate(0, 200px);
+            background: #197d60;
+        }
+
+        100% {
+            transform: translate(0, 0px);
+            background: #f00;
+        }
+    }
+
+    div {
+        background: #f00;
+        width: 100px;
+        height: 100px;
+        margin: 100px auto;
+        animation: motion 5s forwards;
+
+    }
+</style>
+
+<body>
+    <div></div>
+</body>
+
+</html>

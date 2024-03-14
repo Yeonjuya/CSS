@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+body{
+    font-family: 'pretendard',sans-serif;
+    line-height: 1.5;
+    color: #000;
+}
+
+.inner{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* header */
+#header .inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header .gnb{
+    display: flex;
+}
+
+#header h1 img{
+    display: block;
+}
+
+#header .gnb > li{
+    width: calc(100% / 5);
+}
+
+#header .gnb > li > a{
+    display: block;
+    font-size: 20px;
+    padding: 60px 50px;
+    color: #fff;
+}
+
+/* 2차메뉴 */
+
+/* main */
+
+@keyframes vt1{
+    0%,5% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    40%,100% {opacity: 1; transform: translate(0,0);}/* 유지 */
+}
+
+@keyframes vt2{
+    0%,5% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    0%,15% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    40%,100% {opacity: 1; transform: translate(0,0);}/* 유지 */
+}
+
+@keyframes vt3{
+    0%,5% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    0%,25% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    40%,100% {opacity: 1; transform: translate(0,0);}/* 유지 */
+}
+
+#main .main_visual{
+    padding: 280px 0 200px;
+    background: url(../images/mv_01.jpg) no-repeat center 0;    
+}
+
+#main .main_visual img{
+    animation: vt1 6s;
+}
+
+#main .main_visual h2{
+    font-family: 'TheJamsil';
+    color: #fff;
+    font-size: 85px;
+    padding: 70px 0 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    font-weight: 400;
+    text-align: left;
+    animation: vt2 6s;
+}
+
+#main .main_visual p{
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    animation: vt3 6s;
+}
+
+/* count */
+#count{
+    background-image: linear-gradient(to right, #4863bd,#9451e4);
+    padding: 100px 0;
+}
+
+#count .count_list{
+    color: #fff;
+    display: flex;
+    width: 1200px;
+}
+
+#count .count_list li{
+    width: calc(100% / 4);
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.5);
+    padding: 0 80px;
+}
+
+#count .count_list li:nth-child(1){
+    background: url(../images/count_ico_01.png) no-repeat center;
+}
+
+#count .count_list li:nth-child(2){
+    background: url(../images/count_ico_02.png) no-repeat center;
+}
+
+#count .count_list li:nth-child(3){
+    background: url(../images/count_ico_03.png) no-repeat center;
+}
+
+#count .count_list li:nth-child(4){
+    background: url(../images/count_ico_04.png) no-repeat center;
+}
