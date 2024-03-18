@@ -1,0 +1,363 @@
+@charset "utf-8";
+
+
+body{
+    font-family: 'pretendard',sans-serif;
+    line-height: 1.5;
+    color: #000;
+}
+
+.inner{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+
+.social_mv {
+    width: 700px;
+    position: relative;
+}
+.social_mv button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        font-size: 0;
+        background: url('../images/btn_play.png') no-repeat center;
+        cursor: pointer;
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+} 
+
+/* header */
+#header .inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+}
+
+#header img{
+    display: block;
+}
+
+#header .gnb{
+    display: flex;
+    padding: 30px;
+}
+
+#header .gnb > li{
+    width: calc(100% / 4);
+    width: 180px;
+}
+
+#header .gnb > li > a{
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#header .family{
+    background: #720000;
+    border-radius: 30px;
+    padding: 10px 40px;
+}
+
+#header .family a{
+    color: #fff;
+}
+
+/* main_visual */
+#main_visual{
+    background: url(../images/main_visual.jpg) no-repeat center;
+}
+
+#main_visual .inner{
+    padding: 210px 0 300px;
+
+}
+
+#main_visual h2{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    animation: vt1 6s;
+}
+
+
+#main_visual p{
+    color: #fff;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 25px;
+    animation: vt2 6s;
+}
+
+@keyframes vt1{
+    0%,10% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    20%,100% {opacity: 1; transform: translate(0,0);}/* 유지 */
+}
+
+@keyframes vt2{
+    0%,10% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    0%,25% {opacity: 0; transform: translate(0,100px);}/* 0%`5% delay */
+    40%,100% {opacity: 1; transform: translate(0,0);}/* 유지 */
+}
+
+/* bisniess */
+#bisiness{
+    background: url(../images/business_img.jpg) no-repeat right top;
+    margin: 145px 0;
+}
+
+#bisiness h2{
+    color: #720000;
+    font-size: 18px;
+}
+
+#bisiness h3{
+    font-size: 40px;
+    padding: 60px 0 30px;
+}
+
+
+#bisiness p{
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#bisiness ul{
+    display: flex;
+    background: #fff;
+    padding: 50px 0;
+}
+
+#bisiness ul li{
+    width: calc(100% / 3);
+    border-right: 1px solid #ddd;
+    text-align: center;  
+    height: 280px;
+}
+
+#bisiness li:nth-of-type(1){
+    background: url(../images/icon_01.png)no-repeat center top;
+    padding: 120px 0 100px;
+    border-left: 1px solid #ddd;
+}
+
+
+#bisiness li:nth-of-type(2){
+    background: url(../images/icon_02.png)no-repeat center top;
+    padding: 120px 0 100px;
+}
+
+#bisiness li:nth-of-type(3){
+    background: url(../images/icon_03.png)no-repeat center top;
+    padding: 120px 0 100px;
+}
+
+
+#bisiness dl dt{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#bisiness dl dd{
+    font-size: 20px;
+    color: #999;
+    padding-bottom: 30px;
+}
+
+#bisiness dl dd a{
+    display: inline-block;
+    border: 3px solid #ddd;
+    padding: 10px 35px;
+    border-radius: 30px;
+    transition: all 0.4s;
+}
+
+#bisiness dl dd a:hover{
+    background: #720000;
+    color: #fff;
+    border: 3px solid #720000;
+}
+
+/* social */
+#social {
+    background: #eee;
+}
+
+#social .inner{
+    display: flex;
+}
+
+#social .social_txt{
+    background: #fff;
+    padding: 35px 40px 20px;
+}
+
+#social .social_txt h2{
+    color: #720000;
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+#social .social_txt h3{
+    font-size: 40px;
+    padding: 20px 0;
+}
+#social .social_txt p{
+    font-size: 20px;
+    color: #999;
+}
+
+#social .social_txt a{
+    display: inline-block;
+    border: 3px solid #ddd;
+    padding: 10px 35px;
+    border-radius: 30px;
+    transition: all 0.4s;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#social .social_txt a:hover{
+    background: #720000;
+    color: #fff;
+    border: 3px solid #720000;
+}
+
+#social .social_list{
+    display: flex;
+    gap: 20px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 55px 0 10px;
+    margin-top: 50px;
+}
+
+#social .social_style{
+    background: #fff;
+}
+
+#social .social_list img{
+    width: 100%;
+    transition: all 0.6s;
+}
+
+#social .social_list li:hover img{
+    transform: scale(1.2,1.2);
+}
+
+#social .social_list li{
+    position: relative;
+    overflow: hidden;
+}
+
+#social .social_list h4{
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
+
+#recruit{
+    background: #eee url(../images/recruit_bg.jpg) no-repeat left center;
+    margin-top: 150px;
+}
+
+#recruit .inner{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#recruit .recruit_txt{
+    width: 600px;
+    background: #fff;
+    padding: 50px;
+}
+
+#recruit .recruit_txt h2{
+    color: #720000;
+    font-size: 18px;
+}
+
+#recruit .recruit_txt h3{
+    padding: 60px 0 30px;
+    font-size: 40px;
+}
+
+#recruit .recruit_txt p{
+    font-size: 20px;
+    color: #999;
+}
+
+#recruit .recruit_txt a{
+    display: inline-block;
+    border: 3px solid #ddd;
+    padding: 10px 35px;
+    border-radius: 30px;
+    transition: all 0.4s;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#recruit .recruit_txt a:hover{
+    background: #720000;
+    color: #fff;
+    border: 3px solid #720000;
+}
+
+/* footer */
+#footer{
+    background: #666666;
+}
+
+#footer .inner img{
+    display: block;
+    text-align: center;
+}
+
+#footer .inner{
+    padding: 50px 0 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .inner address{
+    margin-right: auto;
+    padding-left: 80px;
+    color: rgba(255,255,255,0.6);
+}
+
+#footer .copy{
+    background: #333;
+}
+
+#footer .footer_link{
+    display: flex;
+    gap: 30px;
+}
+
+#footer .footer_link a{
+    color: #fff;
+    
+}
