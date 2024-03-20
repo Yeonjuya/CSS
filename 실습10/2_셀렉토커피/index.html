@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecto</title>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/recet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1><a href="#"><img src="images/logo.png" alt="셀렉토 커피"></a></h1>
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="#">셀렉토커피</a></li>
+                        <li><a href="#">메뉴소개</a></li>
+                        <li><a href="#">매장안내</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                    </ul>
+                </nav>
+                <button class="sitemap">창업안내</button>
+            </div><!-- inner -->
+        </header>
+
+        <main id="main">
+            <section id="main_visual">
+                <div class="swiper mv">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="images/mb_01.jpg" alt="width auntie anne's"></li>
+                        <li class="swiper-slide"><img src="images/mb_02.jpg" alt=""></li>
+                    </ul><!-- swiper-wrapper -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div><!-- swiper -->
+            </section><!-- main_visual -->
+
+            <section id="menu">
+                <div class="inner">
+                    <h2>BEST MENU</h2>
+                    <p>최고의 커피를 향한 끊임없는 노력, 셀렉토 시그니처</p>
+                    <ul class="menu_list">
+                        <li>
+                            <a href="#">
+                                <img src="images/menu_01.png" alt="셀럽슈페너">
+                                <dl>
+                                    <dt>셀럽슈페너</dt>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/menu_02.png" alt="하모니 가든 아메리카노">
+                                <dl>
+                                    <dt>하모니 가든 아메리카노</dt>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/menu_03.png" alt="디 카페인 아메리카노">
+                                <dl>
+                                    <dt>디 카페인 아메리카노</dt>
+                                </dl>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- inner -->
+            </section><!-- menu -->
+
+            <section id="franchise"></section>
+            <section id="follow"></section>
+            <section id="news"></section>
+        </main>
+
+        <footer id="footer">
+
+        </footer>
+    </div><!-- wrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const mv = new Swiper('.mv', {
+            // 옵션
+            autoplay: {
+                delay: 3000, // 2.5초
+                disableOnInteraction: false, // 마우스로 제어한 후 자동여부(false=자동)
+            },
+            speed: 1000, // 슬라이드넘어가는 속도 ms
+            navigation: {
+                nextEl: ".swiper-button-next", //다음버튼
+                prevEl: ".swiper-button-prev", //이전버튼
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "bullets", //버튼 종류 설정 'bullets' ㅣ 'fraction' ㅣ 'progressbar'
+                clickable: true, // 버튼 클릭 여부
+            },
+        });
+    </script>
+</body>
+
+</html>

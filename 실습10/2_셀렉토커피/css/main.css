@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+body{
+    font-family: "GmarketSans", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #000;
+    position: relative;
+}
+
+.inner{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+#wrap{
+    overflow-x: hidden;
+    min-width: 1600px;
+}
+
+/* header */
+#header .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header h1 img{
+    display: block;
+}
+
+#header .gnb{
+    display: flex;
+}
+
+#header .gnb > li > a{
+    display: block;
+    padding: 45px 50px 35px;
+    font-size: 18px;
+}
+
+#header .sitemap{
+    background: #ff4713;
+    border: 0;
+    color: #fff;
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* main_visual */
+#main_visual{
+    background: url(../images/mb_01.jpg) no-repeat center;
+}
+
+#menu{
+    padding: 190px 0;
+}
+
+#menu .menu_list{
+    display: flex;
+}
+
+#menu .menu_list li{
+    width: calc(100% / 3);
+}
+
+#menu .menu_list img{
+    display: block;
+    width: 100%;
+}
+
+#menu h2{
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+}
+
+#main h2::before {
+    display: block;
+    content: "SELECTO";
+    font-size: 15px;
+    color: #ff4713;
+    background: #000;
+}
+
+#main h2::after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ff4713;
+    position: absolute;
+    left: calc(50% - 60px);
+    top: 10px;
+    z-index: -1;
+}

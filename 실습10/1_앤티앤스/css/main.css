@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+body{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #000;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.inner{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+#wrap{
+    min-width: 1600px;
+}
+
+@keyframes rotate_circle{
+    100%{transform: rotate(360deg);}
+}
+
+.circle{
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    z-index: 2;
+    animation: rotate_circle 30s linear infinite;
+}
+
+
+/* header */
+#header .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#header h1 img{
+    display: block;
+}
+
+#header nav{
+    margin: 0 100px 0 auto;
+}
+
+#header .gnb{
+    display: flex;
+}
+
+#header .gnb > li > a{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 40px;
+}
+
+#header .sitemap{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+#header .sitemap span{
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background: #005ad5;
+}
+
+#header .sitemap span:nth-child(1){
+    position: absolute;
+    left:calc(50% - 12.5px);
+    top: 18px;
+}
+
+#header .sitemap span:nth-child(2){
+    position: absolute;
+    left: calc(50% - 12.5px);
+    bottom: 18px;
+}
+
+/* main */
+#main h2{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 60px;
+    color: #005ad5;
+    letter-spacing: -1px;
+    text-align: center;
+    position: relative;
+}
+/* main_banner */
+#main h2::before {
+    display: block;
+    content: "Auntie Anne's";
+    font-size: 20px;
+    color: #ffb500;
+}
+
+#main h2::after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ffb500;
+    position: absolute;
+    left: calc(50% - 60px);
+    top: 0;
+}
+
+#main h2 + p{
+    color: #999;
+    text-align: center;
+}
+
+/* best */
+
+@keyframes swing{
+    0% {transform: rotate(-15deg);}
+    50% {transform: rotate(5deg);}
+    100%{transform: rotate(-5deg);}
+}
+
+#best{
+    padding: 150px 0;
+}
+
+#best ul{
+    display: flex;
+    align-items: flex-start; /* 높이 고정*/
+ }
+
+#best ul li{
+    width: calc(100% / 2);
+    display: flex;
+    align-items: center;
+}
+
+#best ul li dl dt{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#best ul li dl dd{
+    color: #999;
+    padding-top: 20px;
+}
+
+#best ul li:nth-child(2) {
+    margin-top: 100px;
+}
+
+#best ul li img{
+    animation: swing 2s infinite ;
+}
+
+#best ul li .menu_img{
+    position: relative;
+}
+
+#best ul li .menu_img::before{
+    position: absolute;
+    transform: scale(0,0);
+    content: "";
+    display: block;
+    width: 500px;
+    height: 500px;
+    border: 5px dotted rgb(0, 90, 213, 0.3);
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+#best ul li:hover .menu_img::before{
+    transform: scale(1,1);
+}
+
+/* story */
+#story{
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+#story video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#story .story_txt{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#story .btn a{
+    margin-top: 50px;
+    padding: 5px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #ffb500 url(../images/icon_plus.png) no-repeat center;
+    background-clip: content-box;
+    font-size: 0;
+    border-radius: 50%;
+    border: 2px dotted #ffb500;
+    transition: all 0.5s;
+}
+
+#story .btn a:hover{
+    transform: rotate(180deg) scale(1.1,1.1);
+}
+
+/* follow */
+#follow{
+    padding-top: 150px;
+}
+
+#follow .follow_list{
+    margin-top: 50px;
+}
+
+#follow ul li img{
+    width: 100%;
+    display: block;
+}
+
+#follow ul li{
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#follow ul li a::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8) url(../images/insta_fill.png) no-repeat center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#follow ul li:hover a::before{
+    opacity: 1;
+}
+
+/* event */
+@keyframes rotate_img{
+100%{transform: rotate(360deg);}
+}
+
+#event{
+    background: #f0f7ff;
+    padding: 150px 0;
+    position: relative;
+}
+
+#event::before{
+    content: "";
+    display: block;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px dotted rgba(0, 90, 213, 0.3);
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    animation: rotate_img 30s linear infinite;
+}
+
+#event .inner{
+    display: flex;
+}
+
+/* 좌측 */
+#event .event_txt{
+    width: 400px;
+}
+
+#event .event_txt h2{
+    text-align: left;
+}
+
+#event .event_txt h2 + p{
+    text-align: left;
+}
+
+/* h2 border 위치 변경 */
+#event .event_txt h2::after{
+    left: 0;
+}
+
+/* 우측 */
+#event .event_list{
+    display: flex;
+    width: calc(100% - 400px);
+    gap: 50px
+}
+
+#event .event_list li{
+    width: calc((100% - 50px) / 2);
+    position: relative;
+    overflow: hidden;
+}
+
+#event .event_list li img{
+    display: block;
+    width: 100%;
+}
+
+#event .event_list li dl{
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 50px;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+#event .event_list li:hover dl{
+    bottom: 0;
+}
+
+#event .event_list li dl dt{
+    font-size: 20px;
+}
+
+/* footer */
+#footer{
+    justify-content: center;
+    text-align: center;
+}
+
+#footer .sns{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+#footer .footer_txt{
+    padding: 60px;
+    background: #005ad5;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.copy{
+    background: #ffb500;
+    color: ;
+}
