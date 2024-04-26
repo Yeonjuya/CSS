@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    //depth2
+    $(".depth2").hide();
+    $(".gnb > li").mouseenter(function () {
+        $(this).find(".depth2").stop().fadeIn();
+    });
+
+    $(".gnb > li").mouseleave(function () {
+        $(this).find(".depth2").stop().fadeOut();
+    });
+
     //main_visual
     $(".main_hover").hide();
     $(".tit_2").mouseenter(function () {
@@ -20,7 +30,5 @@ $(document).ready(function () {
         slidesPerView: 3.5, //화면에 보이는 슬라이드 갯수
         spaceBetween: 50,
     });
-
-
 
 });
