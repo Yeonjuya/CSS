@@ -1,0 +1,701 @@
+@charset "utf-8";
+:root{
+    --main-font: 'Domain Iralic';
+    --sub-font:'roboto';
+    --kr-font:'NotoSans';
+}
+
+body{
+    font-family: "Domaine";
+    color: #333;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+}
+
+#wrap{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    min-width: 300px;
+}
+
+.inner{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#main h3{
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+#main h3 + p{
+    font-family: var(--kr-font);
+    padding-top: 20px;
+}
+
+/* header */
+#header .inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#header .gnb{
+    position: absolute;
+    top: -20%;
+    left: 22%;
+    font-family: "Haar";
+    display: flex;
+    padding-right: 100px;
+}
+
+#header .gnb > li > a{
+    display: block;
+    padding: 10px 30px;   
+}
+
+#header .util{
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+#header .util .shopping{
+    position: absolute;
+    left: -35px;
+    top: -5px;
+}
+
+
+
+/* depth2 */
+#header .gnb > li{
+    position: relative;
+}
+
+
+#header .gnb > li > a:hover{
+    background: #000;
+    color: #fff;
+}
+
+
+#header .gnb > li .depth2{
+    position: absolute;
+    left: 30px;
+    width: 250px;
+    z-index: 2;
+    padding-top: 15px;
+    background:rgba(255,255,255,0.9);
+    width: 150px;
+}
+
+#header .gnb >li .depth2 li a{
+    display: block;
+    padding: 10px 0;
+    color: #333;
+}
+
+/* main_visual*/
+#main_visual .inner{
+    padding: 45px 0 0;
+    position: relative;
+    height: 1028px;
+}
+
+#main_visual h2{
+    font-weight: 400;
+    font-size: 16rem;
+}
+
+#main_visual .tit_1{
+    position: absolute;
+    top: 8.5%; /* 13.2 */
+    left: 8.5%;
+}
+
+#main_visual .tit_2{
+    position: absolute;
+    font-size: 14.5rem;
+    top: 26%;
+    left: 25.3%;
+    z-index: 2;
+}
+
+#main_visual .tit_2 span{
+    font-family: var(--main-font);
+}
+
+#main_visual .tit_2::after{
+    content: 'your';
+    color: #fff;
+    position: absolute;
+    right: -57.5%;
+}
+
+#main_visual .tit_3{
+    font-size: 18rem;
+    font-family: var(--main-font);
+    position: absolute;
+    top: 40%;
+    left: 60.6%;
+    z-index: 2;
+    color: #fff;
+}
+
+#main_visual p{
+    padding-left: 45px;
+    font-family: var(--sub-font);
+    background: url(../images/arrow_icon.png) no-repeat left center;
+    position: absolute;
+    top: 46%;
+    left: 26%;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+#main_visual .main_img img{
+    width: 100%;
+    height: 712px;
+}
+
+#main_visual .main_img{
+    position: absolute;
+    top: 13.2%;
+    right: 1%;
+}
+
+#main_visual .main_hover img{
+    width: 550px;
+    height: 350px;
+}
+
+#main_visual .main_hover{
+    position: absolute;
+    top: 5%;
+    left: -1.5%;
+}
+
+/* new_prd */
+#new_prd{
+    letter-spacing: normal;
+    padding: 150px 0;
+    position: relative;
+}
+
+#new_prd .prd_txt{
+    position: absolute;
+    top: 2.5%;
+    letter-spacing: -0.5px;
+}
+
+#new_prd .prd_list{
+    margin-left: 500px;
+}
+
+#new_prd .prd_list dl{
+    font-size: 1.8rem;
+   font-family: var(--sub-font); 
+}
+
+#new_prd .prd_list dl dd{
+    font-weight: 300;
+    padding: 5px 0 10px;
+    color: rgba(0,0,0,0.6);
+    font-size: 1.6rem;
+}
+
+#new_prd .prd_list .price{
+    color: #000;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+#new_prd .prd_img{
+    position: relative;
+}
+
+#new_prd .prd_img img:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+
+}
+
+
+#new_prd .prd_img:hover img:nth-child(2){
+    opacity: 0;
+}
+
+#new_prd .prd_img .prd05{
+    width: 350px;
+    height: 300px;
+} 
+
+/* about */
+@keyframes rotate_img{
+    100%{transform: rotate(360deg);}
+    }
+
+#about{
+    height: 100%;
+    background: #000;
+    color: #fff;
+    padding: 100px 0 1200px;
+    position: relative;
+}
+
+#about h2{
+    font-weight: 400;
+    font-size: 15.5rem;
+}
+
+#about h2::after{
+    content: 'of';
+    font-family: 'Bethaine';
+    font-size: 9rem;
+    font-weight: 300;
+    position: absolute;
+    top: 11%;
+    left: 51.5%;
+}
+
+#about h2::before{
+    content: "";
+    display: block;
+    width: 700px;
+    height: 1px;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    left: 55%;
+    top: 14%;
+}
+
+
+#about h3{
+    font-size: 13rem;
+    font-family: var(--main-font);
+    position: absolute;
+    right: 42%;
+    top: 18%;
+}
+
+#about .history_img_01 img{
+    position: absolute;
+    top: 29%;
+    left: 0%;
+}
+
+
+#about .history_img_02{
+    position: absolute;
+    top: 24%;
+    right: 0;
+}
+
+#about .circle{
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    animation: rotate_img 30s linear infinite;
+}
+
+#about .history_img_01 p{
+    font-size: 1.7rem;
+    line-height: 1.7;
+    font-family: var(--kr-font);
+    color: rgba(255,255,255,0.9);
+    position: absolute;
+    top: 80.3%;
+    left: 40.3%;
+}
+
+#about .history_img_01 p::before{
+    content: "";
+    display: block;
+    width: 700px;
+    height: 1px;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    left: 0%;
+    bottom: -13%;
+}
+
+#about .history_img_01 a{
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    position: absolute;
+    bottom: 7.5%;
+    right: 13%;
+    font-size: 4rem;
+    transition: all 0.4s;
+
+}
+
+#about .history_img_01 a:hover{
+    font-family: var(--main-font); 
+}
+
+#about .history_img_02 p{
+    font-size: 1.7rem;
+    line-height: 1.7;
+    font-family: var(--kr-font);
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    padding-top: 15px;
+
+}
+
+/* gift */
+#gift{
+    position: relative;
+    padding: 150px 0 100px;
+    height: 530vh;
+}
+
+
+#gift .explain{
+    font-family: var(--kr-font);
+    padding-top: 10px;
+    letter-spacing: -1px;
+    font-size: 1.7rem;
+}
+
+#gift h4{
+    font-family: var(--main-font);
+    font-size: 12.5rem;
+    font-weight: 400;
+    color: #ddd;
+}
+
+#gift .fragrance_tit h4{
+    position: absolute;
+    top: 7%;
+    right: 8.7%;
+}
+
+/* fragrance */
+#gift .fragrance{
+    display: flex;
+}
+
+#gift .fragrance_01{
+    position: absolute;
+    top: 15.5%;
+    left: 31%;
+}
+
+#gift .fragrance_01::before{
+    content: 'Set of 5 Eaux de toilette';
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -9.5%;
+}
+
+#gift .fragrance_02{
+    position: absolute;
+    top: 11.3%;
+    right: 11.5%;
+}
+
+#gift .fragrance_02::before{
+    font-size: 2.8rem;
+    content: 'EAU NABATI';
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -14%;
+}
+
+/* candle */
+#gift .candle_tit{
+    position: absolute;
+    top: 26.5%;
+    left: 7.5%;
+}
+
+#gift .candle_tit::before{
+    content: '&';
+    font-family: 'karmila';
+    font-size: 12rem;
+    color: #ddd;
+    position: absolute;
+    top: 70%;
+    left: 33%;
+}
+
+#gift .candle_tit::after{
+    content: 'Home';
+    font-size: 12.5rem;
+    font-family: var(--main-font);
+    color: #ddd;
+    position: absolute;
+    top: 65%;
+    left: 53%;
+}
+
+#gift .candle_01 img{
+    width: 94%;
+}
+
+#gift .candle_01{
+    position: absolute;
+    top: 33%;
+    left: 7.5%;
+}
+
+#gift .candle_01::before{
+    content: 'LIMITED  COLLABORATION';
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -2%;
+}
+
+#gift .candle_02{
+    position: absolute;
+    top: 37%;
+    right: 18%;
+}
+
+#gift .candle_02::before{
+    content: 'LA DROGUERIE';
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -13%;
+}
+
+
+/* deco */
+#gift .deco_tit{
+    position: absolute;
+    top: 49%;
+    right: 8.5%;
+}
+
+#gift .deco_01{
+    position: absolute;
+    top: 53%;
+    right: 11%;
+}
+
+#gift .deco_01::before{
+    content: 'WHITE MEDICIS VASE';
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -14%;
+}
+
+#gift .deco_02{
+    position: absolute;
+    top: 57%;
+    left: 30%;
+}
+
+#gift .deco_02::before{
+    content: 'FLAME PAPER SLEEVE';
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -9.8%;
+}
+
+#gift .bath_tit{
+    position: absolute;
+    top: 70%;
+    left: 7.5%;
+}
+
+#gift .bath_tit::before{
+    content: '&';
+    font-family: 'karmila';
+    font-size: 12rem;
+    color: #ddd;
+    position: absolute;
+    top: 70%;
+    left: 33%;
+}
+
+#gift .bath_tit::after{
+    content: 'Body';
+    font-size: 12.5rem;
+    font-family: var(--main-font);
+    color: #ddd;
+    position: absolute;
+    top: 65%;
+    left: 65%;
+}
+
+#gift .bath_01{
+    position: absolute;
+    top: 77%;
+    left: 12%;
+}
+
+#gift .bath_01::before{
+    content: 'EAU RIHLA';
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -9.8%;
+}
+
+
+#gift .bath_02{
+    position: absolute;
+    top: 80%;
+    left: 57%;
+}
+
+#gift .bath_02::before{
+    content: 'EAU ROSE';
+    font-size: 2.8rem;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: -13.5%;
+}
+
+/* introduce */
+#introduce .inner{
+    padding-bottom: 150px;
+    display: flex;
+    gap: 130px;
+}
+
+#introduce .introduce_gnb dl{
+    text-align: left;
+    color: #ddd;
+    height: 118px;
+    transition: all 0.6s;
+}
+
+#introduce .introduce_gnb dt{
+    font-size: 5.5rem;
+    font-weight: 400;
+    position: relative;
+    margin-top: 20px;
+    width: 970px;
+    background: url(../images/introduce_arrow.jpg) no-repeat right center;
+}
+
+#introduce .introduce_gnb dt::before{
+    content: "";
+    display: block;
+    width: 950px;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+#introduce .introduce_gnb dt::after{
+    content: "";
+    display: block;
+    width: 950px;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+#introduce .introduce_gnb dt:hover::after {
+    transform: translateX(700px); /* 오른쪽으로 50px 이동 */
+    transition: transform 0.3s ease;
+    background: #333; /* 변화를 부드럽게 만듭니다. */
+}
+
+#introduce .introduce_gnb dt span{
+    font-family: 'karmila';
+    font-weight: 300;
+
+}
+
+#introduce .introduce_gnb dd{
+    font-family: var(--kr-font);
+    margin-top: -15px;
+}
+
+#introduce .introduce_gnb dl .line{
+    position: relative;
+}
+
+#introduce .introduce_gnb dl .line::before{
+    content: "";
+    display: block;
+    width: 950px;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    bottom: -35px;
+}
+
+#introduce .introduce_gnb a:hover dl{
+    color: #333;
+}
+
+
+
+/* footer */
+#footer{
+    background: #000;
+    padding: 100px 0;
+    font-family: var(--sub-font);
+}
+
+#footer .inner{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    letter-spacing: 0.7px;
+    font-weight: 300;
+}
+
+#footer .footer_link{
+    display: flex;
+    margin-right: auto;
+    margin-left: 150px;
+}
+
+#footer .footer_link li{
+    padding-top: 10px;
+}
+
+#footer .footer_link img{
+    opacity: 0.9;
+    padding-right: 5px;
+}
+
+#footer .footer_link .service{
+    padding-right: 80px;
+}
+
+
+#footer .footer_link a{
+    font-size: 1.5rem;
+    display: inline-block;
+    color: rgba(255,255,255,0.8);
+}
+
+#footer .family select{
+    background: #000 url(../images/footer_plus.png)no-repeat 200px top;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    padding-bottom: 10px;
+    color: #fff;
+    font-family: var(--sub-font);
+    font-weight: 300;
+    font-size: 1.6rem;
+    letter-spacing: 0.7px;
+    width: 220px;
+    appearance: none;
+}
