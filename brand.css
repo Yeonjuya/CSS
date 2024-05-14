@@ -1,0 +1,443 @@
+@charset "utf-8";
+
+#container .sub_visusal{
+    height: 600px;
+    position: relative;
+}
+
+#container .sub_visusal video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#container .sv_txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+
+
+#container .sv_txt h2{
+    font-size: 10rem;
+    font-family: 'Montaga';
+    font-weight: 400;
+}
+
+#container .sv_txt h2::before{
+    content: "brand story";
+    color: #c27a34;
+    font-size: 1.4rem;
+    display: block;
+    letter-spacing: 5px;
+    text-align: center;
+
+}
+
+#container .sv_txt p{
+    text-align: center;
+    font-size: 2rem;
+    padding: 100px 0 0px;
+    position: relative;
+}
+
+
+#container .sv_txt p::before{
+    content: '';
+    display: block;
+    height: 50px;
+    width: 1px;
+    left: 50%;
+    top: 25%;
+    background: #fff;
+    position: absolute;
+}
+
+
+@media(max-width:768px){
+
+    #container .sv_txt h2{
+        font-size: 6rem;
+    }
+
+    #container .sv_txt p{
+        font-size: 1.4rem;
+    }
+
+    #container .sub_visusal{
+        height: 500px;
+    }
+}
+
+
+/* contents */
+#contents{
+    padding: 200px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#contents .overview{
+    display: flex;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+#contents .inner > div{
+    flex-wrap: wrap;
+}
+
+#contents .overview_txt{
+    width: 60%;
+    font-size: 3.5rem;
+    font-family: var(--main-font);
+    letter-spacing: -2px;
+}
+
+#contents .overview_txt span{
+    color: #c8a666;
+}
+
+#contents .overview_img img{
+    width: 100%;
+}
+
+#contents .overview_img{
+    position: absolute;
+    right: 0%;
+    bottom: -150px;
+}
+
+
+/* overview2 */
+
+#contents .overview2{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contents .overview2 .ov_img{
+    width: 50%;
+}
+
+#contents .overview2 .ov_img img{
+    width: 100%;
+    display: block;
+}
+
+#contents .overview2 .ov_desc{
+    padding-top: 300px;
+    width: 40%;
+}
+
+#contents .ov_desc h2{
+    font-family: 'Montaga';
+    font-size: 5rem;
+    font-weight: 500;
+    position: relative;
+}
+
+#contents .ov_desc h2::after{
+    content: "Brand Btory";
+    position: absolute;
+    display: block;
+    font-size: 1.4rem;
+    color: #c27a34;
+    letter-spacing: 5px;
+    left: 0;
+    top: -20px;
+}
+
+#contents .ov_desc p.slogan{
+    color: #c27a34;
+    font-size: 3rem;
+    padding: 50px 0 10px;
+    position: relative;
+}
+
+#contents .ov_desc p.slogan::after{
+    content: "";
+    width: 60%;
+    height: 20px;
+    transform: skew(-15deg);
+    background: rgb(194, 122, 52, 0.15);
+    position: absolute;
+    left: -5px;
+    bottom: 15px;
+}
+
+#contents .ov_desc p{
+    color: #999;
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+/* overview3 */
+.overview3{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.overview3 .ov_img{
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+
+.overview3 .ov_img img{
+    width: 100%;
+}
+
+.overview3 .ov_desc{
+    width: 50%;
+    padding: 100px 0;
+}
+
+/* overview4 */
+.overview4{
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview4 .ov_img{
+    width: 50%;
+}
+
+.overview4 .ov_img img{
+    width: 100%;
+}
+
+.overview4 .ov_desc{
+    width: 40%;
+    padding-top: 200px;
+}
+
+/* overview5 */
+
+.overview5{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.overview5 .ov_img{
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: -100px;
+}
+
+.overview5 .ov_img img{
+    width: 100%;
+}
+
+.overview5 .ov_desc{
+    width: 50%;
+    padding: 100px 0;
+}
+
+
+@media(max-width: 1024px){
+    #contents {
+        padding: 0 30px;
+    }
+    #contents .overview2 .ov_img{
+        width: 100%;
+    }
+
+    #contents .overview{
+        padding: 50px 0; 
+    }
+
+    #contents .overview_txt{
+        width: 60%;
+        padding: 30px 0;
+        font-size: 3rem;
+    }
+
+    #contents .overview_img{
+        width: 100%;
+        position: static;
+    }
+
+    
+    #contents .overview_img img{
+        width: 40%;
+        float: right;
+    }
+
+    #contents .overview2 .ov_img{
+        width: 100%;
+        position: static;
+    }
+
+    #contents .overview2 .ov_desc{
+        width: 100%;
+        padding: 100px 0;
+    }
+
+    #contents .overview3 .ov_img{
+        width: 100%;
+        position: static;
+        order: 1;
+    }
+
+    #contents .overview3 .ov_desc{
+        width: 100%;
+        order: 2;
+    }
+
+    #contents .overview4 .ov_img{
+        width: 100%;
+        position: static;
+    }
+
+    #contents .overview4 .ov_desc{
+        width: 100%;
+        padding: 100px 0;
+
+    }
+
+    #contents .overview5 .ov_img{
+        width: 100%;
+        position: static;
+        order: 1;
+    }
+
+    #contents .overview5 .ov_desc{
+        width: 100%;
+        order: 2;
+    }
+    
+}
+
+@media(max-width: 768px){
+    #contents .overview2 .ov_img{
+        width: 100%;
+    }
+
+    #contents .overview{
+        padding: 200px 0 20px; 
+    }
+
+    #contents .overview_txt{
+        width: 100%;
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    #contents .overview_img{
+        width: 100%;
+        position: static;
+    }
+
+    #contents .overview_img img{
+        width: 40%;
+        float: right;
+    }
+
+    #contents .overview2 .ov_img{
+        width: 100%;
+        position: static;
+    }
+
+    #contents .ov_desc h2::after{
+        font-size: 1rem;
+    }
+
+    #contents .overview2 .ov_desc{
+        width: 100%;
+        padding: 40px 0 30px;
+    }
+
+    #contents .overview2 .ov_desc h2{
+        font-size: 3rem;
+    }
+
+    #contents .overview2 .ov_desc .slogan{
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+
+    #contents .overview2 .ov_desc p{
+        font-size: 1.4rem;
+    }
+
+    #contents .overview3 .ov_img{
+        width: 100%;
+        position: static;
+        order: 1;
+    }
+
+    #contents .overview3 .ov_desc{
+        width: 100%;
+        order: 2;
+        padding: 40px 0 30px;
+    }
+
+    #contents .overview3 .ov_desc h2{
+        font-size: 3rem;
+    }
+
+    #contents .overview3 .ov_desc .slogan{
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+
+    #contents .overview3 .ov_desc p{
+        font-size: 1.4rem;
+    }
+
+    #contents .overview4 .ov_img{
+        width: 100%;
+        position: static;
+    }
+
+    #contents .overview4 .ov_desc{
+        width: 100%;
+        padding: 100px 0;
+        padding: 40px 0 30px;
+    }
+
+    #contents .overview4 .ov_desc h2{
+        font-size: 3rem;
+    }
+
+    #contents .overview4 .ov_desc .slogan{
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+
+    #contents .overview4 .ov_desc p{
+        font-size: 1.4rem;
+    }
+
+    #contents .overview5 .ov_img{
+        width: 100%;
+        position: static;
+        order: 1;
+    }
+
+    #contents .overview5 .ov_desc{
+        width: 100%;
+        order: 2;
+        padding: 40px 0 200px;
+    }
+
+    #contents .overview5 .ov_desc h2{
+        font-size: 3rem;
+    }
+
+    #contents .overview5 .ov_desc .slogan{
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+
+    #contents .overview5 .ov_desc p{
+        font-size: 1.4rem;
+    }
+    
+}
