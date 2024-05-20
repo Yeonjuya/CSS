@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flip {
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            margin: 100px auto;
+            position: relative;
+            perspective: 500px;
+            /* 원근감 수치가 낮을 수록 효과가 드러남
+            수치가 높을수록 멀리 있는 효과*/
+        }
+
+        .front {
+            width: 100%;
+            height: 100%;
+            background: #00f;
+            color: #fff;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: all 1s;
+        }
+
+        .back {
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            color: #fff;
+            transform: rotateY(180deg);
+            position: absolute;
+            transition: all 1s;
+        }
+
+        .flip:hover .front {
+            transform: rotateY(-180deg);
+        }
+
+        .flip:hover .back {
+            transform: rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flip"><!-- perspective -->
+        <div class="front">front</div>
+        <div class="back">back</div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,715 @@
+@charset "utf-8";
+
+:root {
+    --maincolor: #ff8534;
+    --subcolor: #3366ff;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.inner {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sec_tit h2 {
+    font-size: 6.5rem;
+    color: #fff;
+    letter-spacing: -2px;
+}
+
+.sec_tit h2+p {
+    font-size: 2rem;
+    color: #fff;
+}
+
+@keyframes fadeRight{
+    0%{ transform: translateX(-100px); }
+    100%{ transform: translateX(0); }
+}
+
+@keyframes fadeLeft{
+    0%{ transform: translateX(100px); }
+    100%{ transform: translateX(0); }
+}
+
+@keyframes fadeUp{
+    0%{ transform: translateY(100px); }
+    100%{ transform: translateY(0); }
+}
+
+
+/* header */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% - 61px);
+    z-index: 2;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0;
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .gnb {
+    display: flex;
+}
+
+#header .gnb>li>a {
+    display: block;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+#header .ham{
+    display: none;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#header .util {
+    display: flex;
+    gap: 20px;
+}
+
+#header .util li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media(max-width:1024px){
+    section{
+        padding: 10% 8%;
+    }
+    #header{
+        width: 100%;
+        padding: 1% 3%;
+    }
+    #header .gnb{
+        display: none;
+    }
+    #header .util{
+        display: none;
+    }
+    #header .ham{
+        display: block;
+    }    
+}
+
+/* tooltio */
+#fp-nav ul li a span {
+    background: #fff;
+    border-radius: 0;
+}
+
+#fp-nav ul li a.active span {
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+#fp-nav ul li:hover a.active span {
+    border-radius: 0;
+}
+
+#fp-nav ul li:last-child{
+    display: none;
+}
+
+@media(max-width:1024px){
+    #fp-nav{
+    display: none !important;
+    }
+}
+
+
+/* mv */
+#mv {
+    position: relative;
+    background: url(../images/63_main_section_01.jpg) no-repeat center / cover;
+}
+
+#mv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    /* display:table로 잡혀져 있는 이유로 몇 픽셀이 남기 때문에 비디오 화면을 꽉 채우기 위함 */
+    left: 0;
+    top: 0;
+}
+
+#mv .mv_txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+#mv .mv_txt h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 0 0 20px;
+    position: relative;
+}
+
+#mv .mv_txt h2::before {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 10px;
+    background: var(--maincolor);
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+@keyframes ball {
+    0% {}
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+#mv .mv_txt p {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.stroke {
+    display: block;
+    width: 20px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    margin: 0 auto 10px;
+}
+
+.ball {
+    position: absolute;
+    left: calc(50% - 3px);
+    bottom: 60px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--maincolor);
+    border-radius: 50%;
+    animation: ball 1s infinite;
+}
+
+@media(max-width:1024px){
+    #mv .mv_txt p{
+        font-size: 3.5rem;
+    }
+    .scroll{
+        display: none;
+    }
+}
+
+@media(max-width:768px){
+    #mv .mv_txt h2{
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+    #mv .mv_txt h2::before {
+        width: 220px;
+        height: 10px;
+    }
+    
+}
+
+/* program */
+#program {
+    background: url(../images/63_main_section_02.jpg) no-repeat center / cover;
+}
+
+#program .inner {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#program .sec_tit {
+    width: 30%;
+}
+
+#program .sec_tit h2 {
+    font-size: 7rem;
+}
+
+#program .sec_tit h2+p {
+    font-size: 2rem;
+}
+
+#program ul {
+    width: 70%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#program ul li {
+    perspective: 1000px;
+    height: 500px;
+    width: calc((100% - 60px) / 3);
+    position: relative;
+}
+
+#program ul li .front {
+    transition: all 1s;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    font-weight: 400;
+    font-size: 3.5rem;
+    padding: 50px;
+    height: 100%;
+}
+
+#program ul li:nth-child(1) .front {
+    background: linear-gradient(#3467fe, rgba(0, 0, 255, 0) 50%), url(../images/program_01.jpg) no-repeat center / cover;
+}
+
+#program ul li:nth-child(2) .front {
+    background: linear-gradient(#3467fe, rgba(0, 0, 255, 0) 50%), url(../images/program_02.jpg) no-repeat center / cover;
+}
+
+#program ul li:nth-child(3) .front {
+    background: linear-gradient(#3467fe, rgba(0, 0, 255, 0) 50%), url(../images/program_03.jpg) no-repeat center / cover;
+}
+
+#program ul li .back {
+    transition: all 1s;
+    background: #3467fe;
+    padding: 50px;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+#program ul li .back dt {
+    font-size: 3.5rem;
+}
+
+#program ul li .back dd:nth-of-type(1) {
+    opacity: 0.5;
+    padding: 20px 0;
+}
+
+#program ul li .back dd a {
+    display: inline-block;
+    padding: 10px 50px;
+    color: #fff;
+    border: 1px solid #ffff;
+    border-radius: 50px;
+}
+
+#program ul li:hover .front {
+    transform: rotateY(-180deg);
+}
+
+#program ul li:hover .back {
+    transform: rotateY(0deg);
+}
+
+
+/* 섹션에 도달했을 때 동작 */
+#program.active .sec_tit{
+    animation: fadeRight 1s;
+}
+
+#program.active ul{
+    animation: fadeLeft 2s both;
+}
+
+@media(max-width:1024px){
+    #program .sec_tit{
+        width: 100%;
+        text-align: left;
+    }
+    #program .sec_tit h2{
+        font-size: 4rem;
+    }
+    #program .sec_tit h2+p {
+        font-size: 1.6rem;
+    }
+    #program ul{
+        width: 100%;
+        margin-top: 30px;
+    }
+    #program ul li{
+        width: 100%;
+        height: 300px;
+    }
+    #program ul li .front{
+        font-size: 3rem;
+    }
+    #program ul li .back dt {
+        font-size: 3rem;
+    }
+    #program ul li .back dd:nth-of-type(1) {
+        padding: 10px 0 40px; 
+    }
+
+    /* #program ul li .back{
+        transform: rotateY(0);
+    }
+    #program ul li .front{
+        transform: rotateY(-180deg);
+    } */
+}
+
+/* infos */
+#info {
+    background: url(../images/63_main_section_03.jpg) no-repeat center / cover;
+}
+
+#info .inner{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+#info .sec_tit{
+    width: 35%;
+}
+
+#info .guide{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#info .guide > div{
+    width: calc(100% / 2);
+    padding: 50px;
+    text-align: center;
+}
+
+#info .guide .time{
+    background: #fff;
+    color: #000;
+}
+
+#info .guide .money{
+    background: #3467fe;
+
+}
+
+#info .guide .time h3{
+    font-size: 3.5rem;
+}
+
+#info .guide table{
+    margin: 30px 0;
+}
+
+#info .guide .time table{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+#info .guide .time table tr th{
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+#info .guide .time table tr td{
+    padding: 15px 0;
+    border-bottom: 1px solid  #eee;
+}
+
+#info .guide .time .btn_more a{
+    display: inline-block;
+    border: 1px solid rgba(51, 102, 255, 0.6);
+    padding: 10px 50px;
+    border-radius: 50px;
+    color: #3467fe;
+}
+
+#info .guide .money h3{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+#info .guide .money table{
+    border-top:  1px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#info .guide .money table tr th{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 0;
+}
+
+#info .guide .money table tr td{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 0;
+}
+
+#info .guide .money .btn_more a{
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 50px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+/* 섹션에 도달했을 때 동작 */
+#info.active .sec_tit{
+    animation: fadeRight 1s;
+}
+
+#info.active .guide{
+    animation: fadeLeft 2s both;
+}
+
+@media(max-width:1024px){
+    #info .sec_tit{
+        width: 100%;
+        text-align: left;
+    }
+    #info  .sec_tit h2{
+        font-size: 4rem;
+    }
+    #info  .sec_tit h2+p {
+        font-size: 1.6rem;
+    }
+    #info .guide{
+        width: 100%;
+        margin-top: 30px;
+    }
+    #info .guide > div{
+        width: 100%;
+    }
+}
+
+/* commnuity */
+#community {
+    background: url(../images/63_main_section_04.jpg) no-repeat center / cover;
+    text-align: center;
+}
+
+#community ul{
+    display: flex;
+    color: #fff;
+    gap: 1px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+#community ul li{
+    width: calc((100% - 2px) / 3);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 80px 0;
+    transition: all 0.5s;
+}
+
+#community ul li dl dt{
+    font-size: 3.5rem;
+    line-height: 2;
+}
+
+#community ul li dl dd:nth-of-type(1){
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+#community ul li dl dd a{
+    display: inline-block;
+    padding: 10px 50px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+#community ul li dl > :not(:last-child){
+    transform: translateY(50px);
+    transition: all 0.5s;
+}
+
+#community ul li dl dd:nth-of-type(2){
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#community ul li:hover{
+    background: #3467fe;
+}
+
+#community ul li:hover dl > :not(:last-child){
+    transform: translateY(0);
+}
+
+#community ul li:hover dl dd:nth-of-type(2){
+    opacity: 1;
+}
+
+/* 섹션에 도달했을 때 동작 */
+#community.active .sec_tit{
+    animation: fadeUp 1s;
+}
+
+#community.active .ul{
+    animation: fadeUp 2s;
+}
+
+@media(max-width:1024px){
+    #community .sec_tit{
+        width: 100%;
+        text-align: center;
+    }
+    #community ul li{
+        width: 100%;
+    }
+
+    #community ul li dl > :not(:last-child){
+        transform: translateY(0);
+    }
+    
+    #community ul li dl dd:nth-of-type(2){
+        opacity: 1;
+    }
+
+}
+
+/* sidebar */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    height: 100vh;
+}
+
+#sidebar .event {
+    color: #fff;
+    transform: rotate(90deg) translateX(120px);
+}
+
+#sidebar .event a {
+    color: #fff;
+}
+
+#sidebar ul {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#sidebar ul li a {
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.5s;
+}
+
+#sidebar ul li a:hover {
+    background: #fff;
+    color: var(--maincolor);
+}
+
+#sidebar .gotop {
+    display: block;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width:1024px){
+    #sidebar{
+        display: none;
+    }
+}
+
+/* footer */
+#footer{
+    background: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+#footer .inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#footer .footer_link{
+    display: flex;
+    gap: 20px;
+}
+
+#footer .footer_link a{
+    color: #fff;
+}
+
+#footer address{
+    padding: 20px 0;
+    opacity: 0.5;
+}
+
+#footer .copy{
+    opacity: 0.5;
+}
+
+#footer .sns{
+    display: flex;
+    gap: 30px;
+}
+
+#footer .sns li a{
+    color: #fff;
+    font-size: 2.5rem;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+#footer .sns li a:hover{
+    color: #3467fe;
+}
+
+@media (max-width:1024px){
+    #footer .inner > *{
+        width: 100%;
+    }
+    #footer .sns{
+        padding-top: 20px;
+    }
+}
